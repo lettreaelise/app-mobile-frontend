@@ -73,7 +73,7 @@ const uploadImage = async (localUri) => {
         name: 'photo.jpg',
         type: 'image/jpeg',
     });
-    formData.append('upload_preset', 'my-photos'); // Nome do Upload Preset no Cloudinary
+    formData.append('upload_preset', 'minhas_fotos'); // Nome do Upload Preset no Cloudinary
 
     const response = await axios.post('https://api.cloudinary.com/v1_1/seu_cloud_name/image/upload', formData);
     return response.data.secure_url; // URL pública
@@ -83,7 +83,7 @@ const uploadImage = async (localUri) => {
 
 Substitua:
 
-- my-photos pelo nome do seu Upload Preset.
+- minhas_fotos pelo nome do seu Upload Preset.
 - seu_cloud_name pelo seu Cloud Name no Cloudinary.
 
 
